@@ -2,9 +2,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Employee empl1 = new Employee("Oleksandr Levytskyi", "Director", 12000 );
-        empl1.showInfo();
-    }
+        Monster monster = new Monster(5);
+        monster.voice(10, "Aaaaaaa");
+
+//        Box box = new Box(30);
+//        box.showVolume();
+//
+//    }
+//        System.out.println(MyMath.multiple(5));
+//    }
+//        Employee empl1 = new Employee("Oleksandr Levytskyi", "Director", 12000 );
+//        empl1.showInfo();
+//    }
 
 //        Rectangle rect = new Rectangle();
 //        rect.setDimens(10, 5);
@@ -53,4 +62,5 @@ public class Main {
 //        double result = sum / 3;
 //        System.out.println(result);
 //    }
+    }
 }
