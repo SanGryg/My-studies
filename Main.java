@@ -2,8 +2,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Monster monster = new Monster(5);
-        monster.voice(10, "Aaaaaaa");
+        Box current = new Box(10);
+        Box another = current.increase();
+        current.showVolume();
+        another.showVolume();
+//
+//        Monster monster = new Monster(5);
+//        monster.voice(10, "Aaaaaaa");
 
 //        Box box = new Box(30);
 //        box.showVolume();
