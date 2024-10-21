@@ -1,33 +1,41 @@
+package test;
+
+import examples.Person;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Box current = new Box(10);
-        Box another = current.increase();
+//        Person person = new Person("Sasha", 38);
+//        person.setAge(-45);
+//        System.out.println("Name: " + person.getName() + " Age: " + person.getAge());
+
+        box.Box current = new box.Box(10);
+        box.Box another = current.increase();
         current.showVolume();
         another.showVolume();
-//
-//        Monster monster = new Monster(5);
+
+//        examples.Monster monster = new examples.Monster(5);
 //        monster.voice(10, "Aaaaaaa");
 
-//        Box box = new Box(30);
+//        box.Box box = new box.Box(30);
 //        box.showVolume();
 //
 //    }
-//        System.out.println(MyMath.multiple(5));
+//        System.out.println(examples.MyMath.multiple(5));
 //    }
-//        Employee empl1 = new Employee("Oleksandr Levytskyi", "Director", 12000 );
+//        examples.Employee empl1 = new examples.Employee("Oleksandr Levytskyi", "Director", 12000 );
 //        empl1.showInfo();
 //    }
 
-//        Rectangle rect = new Rectangle();
+//        examples.Rectangle rect = new examples.Rectangle();
 //        rect.setDimens(10, 5);
 //        System.out.println(rect.getArea());
 //    }
-//        Test test = new Test();
+//        examples.Test test = new examples.Test();
 //        System.out.println(test.square(20));
 //    }
-//        Dog dog = new Dog();
+//        examples.Dog dog = new examples.Dog();
 //
 //        dog.name = "Max";
 //        dog.breed = "Belgian shepherd";
@@ -36,28 +44,28 @@ public class Main {
 //        dog.run();
 //    }
 
-//        Box box1 = new Box(10,10,10);
+//        box.Box box1 = new box.Box(10,10,10);
 //
-//        Box box2 = new Box(20,20,20);
+//        box.Box box2 = new box.Box(20,20,20);
 //
 //         box1.showVolume();
 //
 //         box2.showVolume();
 //    }
 
-//        Person john = new Person();
+//        examples.Person john = new examples.Person();
 //
 //        john.name = "John";
 //        john.age = 15;
 //        john.weight = 66;
 //
-//        Person victor = new Person();
+//        examples.Person victor = new examples.Person();
 //
 //        victor.name = "Victor";
 //        victor.age = 30;
 //        victor.weight = 88;
 //
-//        Person max = new Person();
+//        examples.Person max = new examples.Person();
 //
 //        max.name = "Max";
 //        max.age = 19;
