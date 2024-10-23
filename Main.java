@@ -1,19 +1,43 @@
 package test;
 
+import examples.MyMath;
 import examples.Person;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
+        MyArrayList employees = getEmployees();
+        employees.add("Marharyta Smith");
+        employees.remove("Olivia Smith");
+        for(int i = 0; i < employees.getSize(); i++) {
+            System.out.println(employees.get(i));
+        }
+    }
+
+    private static MyArrayList getEmployees() {
+
+        MyArrayList employees = new MyArrayList();
+        employees.add( "John Smith" );
+        employees.add("Olivia Smith"); ;
+        employees.add("Angelina Smith");
+        employees.add("Sasha Smith");
+        employees.add("Alisa Smith");
+        return employees;
+    }
+}
+
+//        System.out.println(MyMath.sum(1, 2, 3, 7, 10, 100, 777));
+
+//        System.out.println(MyMath.length(10));
 
 //        Person person = new Person("Sasha", 38);
 //        person.setAge(-45);
 //        System.out.println("Name: " + person.getName() + " Age: " + person.getAge());
 
-        box.Box current = new box.Box(10);
-        box.Box another = current.increase();
-        current.showVolume();
-        another.showVolume();
+//        box.Box current = new box.Box(10);
+//        box.Box another = current.increase();
+//        current.showVolume();
+//        another.showVolume();
 
 //        examples.Monster monster = new examples.Monster(5);
 //        monster.voice(10, "Aaaaaaa");
@@ -75,5 +99,5 @@ public class Main {
 //        double result = sum / 3;
 //        System.out.println(result);
 //    }
-    }
-}
+//    }
+//}
