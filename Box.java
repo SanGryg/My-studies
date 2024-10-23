@@ -32,7 +32,7 @@ public class Box {
         return new Box(this.length * 2, this.width * 2, this.height * 2);
     }
 
-    public setDimensions(double length, double width, double height) {
+    public void setDimensions(double length, double width, double height) {
         this.length = length;
         this.width = width;
         this.height = height;
