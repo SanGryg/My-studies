@@ -6,25 +6,62 @@ import examples.Person;
 public class Main {
 
     public static void main(String... args) {
-        MyArrayList employees = getEmployees();
-        employees.add("Marharyta Smith");
-        employees.remove("Olivia Smith");
-        for(int i = 0; i < employees.getSize(); i++) {
-            System.out.println(employees.get(i));
-        }
-    }
 
-    private static MyArrayList getEmployees() {
+        String s = "This is John. He is 38 years old. ";
+        String name = s.substring(8, 12);
+        String ageString = s.substring(20, 22);
+        int age = Integer.parseInt(ageString);
+        Person person = new Person(name, age);
+        System.out.println(person.getName() + " " + person.getAge());
 
-        MyArrayList employees = new MyArrayList();
-        employees.add( "John Smith" );
-        employees.add("Olivia Smith"); ;
-        employees.add("Angelina Smith");
-        employees.add("Sasha Smith");
-        employees.add("Alisa Smith");
-        return employees;
+//        String a = "1000";
+//        String b = "2000";
+//        int i = Integer.parseInt(a);
+//        int i1 = Integer.parseInt(b);
+//        System.out.println(i + i1);
+
+
+//        Примітивний тип:
+//        int a = 5;
+//        byte b;
+//        short c;
+//        long d;
+//        char e;
+//        float f;
+//        double g;
+//        boolean h;
+
+//        Посилальний тип: (краще не використовувати - навантажує прогу):
+//        Integer a1 = 5;
+//        Byte b1;
+//        Short c1;
+//        Long d1;
+//        Character e1;
+//        Float f1;
+//        Double g1;
+//        Boolean h1;
+
     }
-}
+//        MyArrayList employees = getEmployees();
+//        employees.add("Marharyta Smith");
+//        employees.remove("Olivia Smith");
+//        for (int i = 0; i < employees.getSize(); i++) {
+//            System.out.println(employees.get(i));
+//        }
+//    }
+//
+//    private static MyArrayList getEmployees() {
+//
+//        MyArrayList employees = new MyArrayList();
+//        employees.add("John Smith");
+//        employees.add("Olivia Smith");
+//        ;
+//        employees.add("Angelina Smith");
+//        employees.add("Sasha Smith");
+//        employees.add("Alisa Smith");
+//        return employees;
+//    }
+
 
 //        System.out.println(MyMath.sum(1, 2, 3, 7, 10, 100, 777));
 
@@ -101,3 +138,4 @@ public class Main {
 //    }
 //    }
 //}
+}
