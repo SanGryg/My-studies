@@ -1,195 +1,46 @@
-package test;
+package multithreading;
 
-import box.Box;
-import box.Weight_box;
-import examples.Person;
-import inheritance.Cat;
-import inheritance.Lion;
-import inheritance.Rect;
-import inheritance.Triangle;
-
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
 
-    public static void main(String... args) {
+    static boolean winner = false;
+
+    public static void main(String[] args) {
+
+        int bound = 1_000_000_000;
 
         Random random = new Random();
+        int number = random.nextInt(bound);
 
-        for (int i = 0; i < 100; i++) {
-            int a = random.nextInt(1,7);
-            String result = String.format("Your number:  %s", a);
-            System.out.println(result);
-        }
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int option;
+                do {
+                    option = random.nextInt(bound);
+                } while (option != number);
+                winner = true;
+                System.out.println("Winner: " + option);
+            }
+        });
+        thread.start();
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10_000_000; i++) {
+                    if (winner) {
+                        break;
+                    }
+                    System.out.println(i);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+
+                    }
+                }
+            }
+        });
+        thread2.start();
     }
-//        Person person = new Person("Sasha Levytskyi", 39);
-//        System.out.println(person);
-//    }
-
-//        Rect rect = new Rect(10, 20);
-//        Triangle triangle = new Triangle(15, 15, 15);
-//        rect.showPerimeter();
-//        triangle.showPerimeter();
-//    }
-//        Box box = new Box(10);
-//        Weight_box weightBox = new Weight_box(10, 25);
-//        box.showInfo();
-//        weightBox.showInfo();
-//    }
-
-//        Cat cat = new Cat();
-//        Lion lion = new Lion();
-////        System.out.println(cat.isCanEatPerson());
-////        System.out.println(lion.isCanEatPerson());
-//            cat.eat();
-//            lion.eat();
-//
-//    }
-
-
-//        String s = "This is John. He is 38 years old. ";
-//        String name = s.substring(8, 12);
-//        String ageString = s.substring(20, 22);
-//        int age = Integer.parseInt(ageString);
-//        Person person = new Person(name, age);
-//        System.out.println(person.getName() + " " + person.getAge());
-
-//        ArrayList<Integer> numbers = new ArrayList<>();
-//        for (int i = 0; i < 5; i++) {
-//            numbers.add(i);
-//        }
-//        ArrayList<String> names = getEmployees();
-//        ArrayList<String> result = new ArrayList<>();
-//        for (int i = 0; i < names.size(); i++) {
-//            result.add(numbers.get(i) + " " + names.get(i));
-//        }
-//
-//        for (String s : result) {
-//            System.out.println(s);
-//        }
-//    }
-//        ArrayList<String> employees = getEmployees();
-//        employees.add("Marharyta Smith");
-//        employees.remove("Olivia Smith");
-//        for (String employee : employees) {
-//            System.out.println(employee);
-//        }
-
-//        private static ArrayList<String> getEmployees() {
-//            ArrayList<String> employees = new ArrayList<>();
-//            employees.add("John Smith");
-//            employees.add("Olivia Smith");
-//            employees.add("Angelina Smith");
-//            employees.add("Sasha Smith");
-//            employees.add("Alisa Smith");
-//            return employees;
-//        }
-
-//        String a = "1000";
-//        String b = "2000";
-//        int i = Integer.parseInt(a);
-//        int i1 = Integer.parseInt(b);
-//        System.out.println(i + i1);
-
-
-//        Примітивний тип:
-//        int a = 5;
-//        byte b;
-//        short c;
-//        long d;
-//        char e;
-//        float f;
-//        double g;
-//        boolean h;
-
-//        Посилальний тип: (краще не використовувати - навантажує прогу):
-//        Integer a1 = 5;
-//        Byte b1;
-//        Short c1;
-//        Long d1;
-//        Character e1;
-//        Float f1;
-//        Double g1;
-//        Boolean h1;
-
-//    }
-//
-//
-
-
-//        System.out.println(MyMath.sum(1, 2, 3, 7, 10, 100, 777));
-
-//        System.out.println(MyMath.length(10));
-
-//        Person person = new Person("Sasha", 38);
-//        person.setAge(-45);
-//        System.out.println("Name: " + person.getName() + " Age: " + person.getAge());
-
-//        box.Box current = new box.Box(10);
-//        box.Box another = current.increase();
-//        current.showVolume();
-//        another.showVolume();
-
-//        examples.Monster monster = new examples.Monster(5);
-//        monster.voice(10, "Aaaaaaa");
-
-//        box.Box box = new box.Box(30);
-//        box.showVolume();
-//
-//    }
-//        System.out.println(examples.MyMath.multiple(5));
-//    }
-//        examples.Employee empl1 = new examples.Employee("Oleksandr Levytskyi", "Director", 12000 );
-//        empl1.showInfo();
-//    }
-
-//        examples.Rectangle rect = new examples.Rectangle();
-//        rect.setDimens(10, 5);
-//        System.out.println(rect.getArea());
-//    }
-//        examples.Test test = new examples.Test();
-//        System.out.println(test.square(20));
-//    }
-//        examples.Dog dog = new examples.Dog();
-//
-//        dog.name = "Max";
-//        dog.breed = "Belgian shepherd";
-//        dog.weight = 8;
-//        dog.speed = 10;
-//        dog.run();
-//    }
-
-//        box.Box box1 = new box.Box(10,10,10);
-//
-//        box.Box box2 = new box.Box(20,20,20);
-//
-//         box1.showVolume();
-//
-//         box2.showVolume();
-//    }
-
-//        examples.Person john = new examples.Person();
-//
-//        john.name = "John";
-//        john.age = 15;
-//        john.weight = 66;
-//
-//        examples.Person victor = new examples.Person();
-//
-//        victor.name = "Victor";
-//        victor.age = 30;
-//        victor.weight = 88;
-//
-//        examples.Person max = new examples.Person();
-//
-//        max.name = "Max";
-//        max.age = 19;
-//        max.weight = 70;
-//
-//        double sum = john.age + victor.age + max.age;
-//        double result = sum / 3;
-//        System.out.println(result);
-//    }
-//    }
 }
