@@ -1,18 +1,90 @@
 package test;
 
-import examples.MyMath;
+import box.Box;
+import box.Weight_box;
 import examples.Person;
+import inheritance.Cat;
+import inheritance.Lion;
+import inheritance.Rect;
+import inheritance.Triangle;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String... args) {
 
-        String s = "This is John. He is 38 years old. ";
-        String name = s.substring(8, 12);
-        String ageString = s.substring(20, 22);
-        int age = Integer.parseInt(ageString);
-        Person person = new Person(name, age);
-        System.out.println(person.getName() + " " + person.getAge());
+        Random random = new Random();
+
+        for (int i = 0; i < 100; i++) {
+            int a = random.nextInt(1,7);
+            String result = String.format("Your number:  %s", a);
+            System.out.println(result);
+        }
+    }
+//        Person person = new Person("Sasha Levytskyi", 39);
+//        System.out.println(person);
+//    }
+
+//        Rect rect = new Rect(10, 20);
+//        Triangle triangle = new Triangle(15, 15, 15);
+//        rect.showPerimeter();
+//        triangle.showPerimeter();
+//    }
+//        Box box = new Box(10);
+//        Weight_box weightBox = new Weight_box(10, 25);
+//        box.showInfo();
+//        weightBox.showInfo();
+//    }
+
+//        Cat cat = new Cat();
+//        Lion lion = new Lion();
+////        System.out.println(cat.isCanEatPerson());
+////        System.out.println(lion.isCanEatPerson());
+//            cat.eat();
+//            lion.eat();
+//
+//    }
+
+
+//        String s = "This is John. He is 38 years old. ";
+//        String name = s.substring(8, 12);
+//        String ageString = s.substring(20, 22);
+//        int age = Integer.parseInt(ageString);
+//        Person person = new Person(name, age);
+//        System.out.println(person.getName() + " " + person.getAge());
+
+//        ArrayList<Integer> numbers = new ArrayList<>();
+//        for (int i = 0; i < 5; i++) {
+//            numbers.add(i);
+//        }
+//        ArrayList<String> names = getEmployees();
+//        ArrayList<String> result = new ArrayList<>();
+//        for (int i = 0; i < names.size(); i++) {
+//            result.add(numbers.get(i) + " " + names.get(i));
+//        }
+//
+//        for (String s : result) {
+//            System.out.println(s);
+//        }
+//    }
+//        ArrayList<String> employees = getEmployees();
+//        employees.add("Marharyta Smith");
+//        employees.remove("Olivia Smith");
+//        for (String employee : employees) {
+//            System.out.println(employee);
+//        }
+
+//        private static ArrayList<String> getEmployees() {
+//            ArrayList<String> employees = new ArrayList<>();
+//            employees.add("John Smith");
+//            employees.add("Olivia Smith");
+//            employees.add("Angelina Smith");
+//            employees.add("Sasha Smith");
+//            employees.add("Alisa Smith");
+//            return employees;
+//        }
 
 //        String a = "1000";
 //        String b = "2000";
@@ -41,26 +113,9 @@ public class Main {
 //        Double g1;
 //        Boolean h1;
 
-    }
-//        MyArrayList employees = getEmployees();
-//        employees.add("Marharyta Smith");
-//        employees.remove("Olivia Smith");
-//        for (int i = 0; i < employees.getSize(); i++) {
-//            System.out.println(employees.get(i));
-//        }
 //    }
 //
-//    private static MyArrayList getEmployees() {
 //
-//        MyArrayList employees = new MyArrayList();
-//        employees.add("John Smith");
-//        employees.add("Olivia Smith");
-//        ;
-//        employees.add("Angelina Smith");
-//        employees.add("Sasha Smith");
-//        employees.add("Alisa Smith");
-//        return employees;
-//    }
 
 
 //        System.out.println(MyMath.sum(1, 2, 3, 7, 10, 100, 777));
@@ -137,5 +192,4 @@ public class Main {
 //        System.out.println(result);
 //    }
 //    }
-//}
 }
