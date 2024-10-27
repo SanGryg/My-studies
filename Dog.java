@@ -1,17 +1,13 @@
-public class Dog {
-    String name;
-    String breed;
-    double weight;
+package interfaces;
 
-    int speed;
-
-    String getInfo(){
-        return " Name: " +name + " " + "Bread: " + breed + " " + "Weight: " + weight;
+public class Dog extends Animal implements AbleToRun{
+    @Override
+    public void eat() {
+        System.out.println("Dog food");
     }
 
-    void run(){
-      for (int i = 0; i < speed; i++){
-          System.out.println("i run");
-      }
+    @Override
+    public void run(){
+        System.out.println("Dog run");
     }
 }
