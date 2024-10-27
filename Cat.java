@@ -1,13 +1,14 @@
-package interfaces;
+package inheritance;
 
-public class Cat extends Animal implements AbleToRun{
-    @Override
-    public void eat() {
-        System.out.println("Сat food");
+public class Cat extends CatFamily{
+
+    public Cat() {
+        super(4, 2, false);
     }
 
     @Override
-    public void run(){
-        System.out.println("Cat run");
+    public void eat() {
+        super.eat();
+        System.out.println("Whiskas");
     }
 }
